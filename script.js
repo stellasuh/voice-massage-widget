@@ -1,10 +1,7 @@
 onst colors = ['color1', 'color2', 'color3', 'color4'];
 const audioFiles = [
     { src: 'https://stellasuh.github.io/voice-massage-widget/7184037680177482522.mp3', transcription: 'it will be okay, you will be okay, i promise. And if stress creeps up on you again, just remember to breathe.' },
-    { src: 'path/to/your/audio2.mp3', transcription: 'Second motivational message.' },
-    { src: 'path/to/your/audio3.mp3', transcription: 'Third motivational message.' },
-    { src: 'path/to/your/audio4.mp3', transcription: 'Fourth motivational message.' }
-];
+    ];
 let colorIndex = 0;
 let currentFileIndex = 0;
 
