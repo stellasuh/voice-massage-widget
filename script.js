@@ -1,0 +1,37 @@
+onst colors = ['color1', 'color2', 'color3', 'color4'];
+const audioFiles = [
+    { src: '', transcription: 'it will be okay, you will be okay, i promise. And if stress creeps up on you again, just remember to breathe.' },
+    { src: 'path/to/your/audio2.mp3', transcription: 'Second motivational message.' },
+    { src: 'path/to/your/audio3.mp3', transcription: 'Third motivational message.' },
+    { src: 'path/to/your/audio4.mp3', transcription: 'Fourth motivational message.' }
+];
+let colorIndex = 0;
+let currentFileIndex = 0;
+
+const audioElement = document.getElementById('audio');
+const voiceWidget = document.getElementById('voiceWidget');
+const transcriptionText = document.getElementById('transcription');
+
+function playNextFile() {
+    if (audioFiles.length === 0) return;
+
+    const file = audioFiles[currentFileIndex];
+    audioElement.src = file.src;
+    transcriptionText.textContent = file.transcription;
+
+    // Set background color
+    voiceWidget.className = 'voice-widget ' + colors[colorIndex];
+    colorIndex = (colorIndex + 1) % colors.length;
+
+    // Play audio
+    audioElement.play();
+}
+
+// Handle audio end event
+audioElement.addEventListener('ended', () => {
+    currentFileIndex = (currentFileIndex + 1) % audioFiles.length;
+    playNextFile();
+});
+
+// Start playing the first file
+playNextFile();
