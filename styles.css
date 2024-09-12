@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.voice-widget {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 1s ease;
+    background-color: #e66a8e; /* Default color */
+}
+
+.voice-widget audio {
+    margin-top: 10px;
+}
+
+.voice-widget p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.color1 { background-color: #e66a8e; }
+.color2 { background-color: #ecadc8; }
+.color3 { background-color: #e98dad; }
+.color4 { background-color: #ffbdd0; }
